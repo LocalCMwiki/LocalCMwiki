@@ -12,6 +12,12 @@ import List from "~/components/List";
 
 export default {
   name: "IndexPage",
+  head() {
+    return {
+      title: "ローカルCMwiki",
+      titleTemplate: null,
+    };
+  },
   components: {
     Title,
     List,
