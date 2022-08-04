@@ -71,7 +71,7 @@ export default {
         {
           hid: "description",
           name: "description",
-          content: process.env.npm_package_description || "",
+          content: this.body,
         },
         {
           hid: "og:site_name",
@@ -85,7 +85,7 @@ export default {
         {
           hid: "og:description",
           property: "og:description",
-          content: "共通ディスクリプション",
+          content: this.body,
         },
         {
           hid: "og:image",
