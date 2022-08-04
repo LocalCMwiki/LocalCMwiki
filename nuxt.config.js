@@ -1,3 +1,4 @@
+const base = "https://localcmwiki.com";
 import { collection, getDocs, getFirestore } from "firebase/firestore";
 
 export default {
@@ -75,6 +76,7 @@ export default {
 
   sitemap: {
     path: "/sitemap.xml",
+    hostname: base,
     exclude: ["/create", "/edit/*", "/maintenance", "/list/*", "/backup/*"],
     routes: async () => {
       let list = [];

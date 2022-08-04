@@ -71,7 +71,7 @@ export default {
         {
           hid: "description",
           name: "description",
-          content: this.body,
+          content: this.title + "のCMについての記事です。",
         },
         {
           hid: "og:site_name",
