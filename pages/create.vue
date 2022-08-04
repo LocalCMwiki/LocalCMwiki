@@ -78,9 +78,9 @@ export default {
         language: "ja",
         height: 500,
         menubar: false,
-        plugins: ["media table lists paste"],
+        plugins: ["media table lists paste link"],
         toolbar:
-          "formatselect | undo redo | bold italic forecolor backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | media | table",
+          "formatselect | undo redo | bold italic forecolor backcolor | link |alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | media | table",
         block_formats: "Paragraph=p;見出し=h2",
       },
     };
