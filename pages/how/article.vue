@@ -64,6 +64,11 @@
       <li>(7):テーブル</li>
       <li>(8):記事の内容</li>
     </ul>
+
+    <h2>ペーストについて</h2>
+    <ul>
+      <li>ペーストはPCの場合、<strong>Ctrl+V</strong>にてできます。</li>
+    </ul>
   </div>
 </template>
 

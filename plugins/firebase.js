@@ -1,4 +1,5 @@
 import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
   apiKey: process.env.NUXT_ENV_API_KEY,
@@ -10,7 +11,5 @@ const firebaseConfig = {
   measurementId: process.env.NUXT_ENV_MEASUREMENT_ID,
 };
 
-const firebaseApp = initializeApp(firebaseConfig);
-export default (context, inject) => {
-  inject("firebase", firebaseApp);
-};
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
