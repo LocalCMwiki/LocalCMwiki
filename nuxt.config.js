@@ -1,5 +1,7 @@
+import axios from "axios";
 const base = "https://localcmwiki.com";
-import { collection, getDocs, getFirestore } from "firebase/firestore";
+const url =
+  "https://firestore.googleapis.com/v1/projects/localcmwiki-7d7af/databases/(default)/documents/article";
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -79,16 +81,10 @@ export default {
     hostname: base,
     exclude: ["/create", "/edit/*", "/maintenance", "/list/*", "/backup/*"],
     routes: async () => {
-      let list = [];
-      const db = getFirestore();
-
-      const querySnapshot = await getDocs(collection(db, "article"));
-
-      querySnapshot.forEach((doc) => {
-        list.push(doc.data());
-      });
-
-      return list.map((info) => "/page/" + info.id);
+      const res = await axios.get(url);
+      return res.data.documents.map(
+        (info) => "/page/" + info.fields.id.stringValue
+      );
     },
   },
 };
