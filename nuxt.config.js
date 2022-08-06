@@ -44,6 +44,11 @@ export default {
         content:
           "https://lh3.googleusercontent.com/pw/AL9nZEUVJ4LxFltcN1Vn-LQe4X2-9uxSPozf9ouq952ca3PeDV1OmT2OJLU-i72stv_sK9Ng5JMd7MOBxAtYe6qOX2kHfhwPgj77B6Ie1aH5GbjHequBbxGjOGIfIvnerLSUGG0G329GPKvNqBuy9eSDR2A=w1280-h768-no?authuser=0",
       },
+      {
+        src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9376668799007336",
+        crossorigin: "anonymous",
+        async: true,
+      },
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
