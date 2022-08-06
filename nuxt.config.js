@@ -1,7 +1,6 @@
 import axios from "axios";
 const base = "https://localcmwiki.com";
-const url =
-  "https://firestore.googleapis.com/v1/projects/localcmwiki-7d7af/databases/(default)/documents/article";
+const url = process.env.NUXT_ENV_SITE_MAP;
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
