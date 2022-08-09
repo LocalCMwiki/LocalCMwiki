@@ -47,6 +47,7 @@
 
 <script>
 import { getDoc, getFirestore, doc } from "firebase/firestore";
+import { db } from "~/plugins/firebase.js";
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
@@ -99,7 +100,7 @@ export default {
   },
   async asyncData({ route, error }) {
     const id = route.params.id;
-    const db = getFirestore();
+    //const db = getFirestore();
 
     const docRef = doc(db, "article", id);
     const docSnap = await getDoc(docRef);

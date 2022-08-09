@@ -1,5 +1,6 @@
-import { initializeApp } from "firebase/app";
+import { initializeApp, getApps } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: process.env.NUXT_ENV_API_KEY,
@@ -11,5 +12,17 @@ const firebaseConfig = {
   measurementId: process.env.NUXT_ENV_MEASUREMENT_ID,
 };
 
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+let app;
+
+const apps = getApps();
+if (!apps.length) {
+  app = initializeApp(firebaseConfig);
+} else {
+  app = apps[0];
+}
+if (typeof window !== "undefined") {
+  let analytics = getAnalytics(app);
+}
+
+const db = getFirestore(app, {});
+export { db };
