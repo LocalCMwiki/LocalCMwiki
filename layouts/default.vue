@@ -3,13 +3,13 @@
     <div class="container">
       <Header></Header>
 
-      <div class="columns is-desktop">
-        <div class="column is-8">
+      <div class="columns is-desktop r-desktop">
+        <div class="column is-8-desktop is-full">
           <div class="p-10">
             <Nuxt></Nuxt>
           </div>
         </div>
-        <div class="column is-4">
+        <div class="column is-4-desktop is-full">
           <div class="p-10">
             <Side></Side>
           </div>
