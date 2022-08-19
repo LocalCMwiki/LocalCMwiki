@@ -9,6 +9,11 @@
           </li>
         </ul>
       </div>
+      <h2 class="list">サイト説明</h2>
+      <ul>
+        <li><nuxt-link to="/siteinfo">このサイトについて</nuxt-link></li>
+      </ul>
+
       <h2 class="list">メニュー</h2>
       <ul>
         <li><nuxt-link to="/create">新規ページ作成</nuxt-link></li>
