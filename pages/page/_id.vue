@@ -11,12 +11,23 @@
     </b-breadcrumb>
     <div class="content">
       <h1>{{ title }}</h1>
-      <a
-        href="https://twitter.com/share?ref_src=twsrc%5Etfw"
-        class="twitter-share-button"
-        data-show-count="false"
-        >Tweet</a
-      >
+      <div class="mb-20">
+        <b-button
+          type="is-info"
+          tag="a"
+          :href="
+            'https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw&url=' +
+            encodeURI('https://www.localcmwiki.com' + $route.path) +
+            '&text=' +
+            encodeURI(title + ' | ローカルCMwiki')
+          "
+          size="is-small"
+          icon-left="twitter"
+          target="_blank"
+        >
+          Twitterにて共有</b-button
+        >
+      </div>
       <div>
         <b-taglist>
           <b-tag type="is-info" v-for="(list, id) in tags" :key="id">
