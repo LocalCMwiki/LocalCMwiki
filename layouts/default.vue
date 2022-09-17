@@ -32,7 +32,7 @@ import Side from "@/components/Side.vue";
 import { getAuth, onAuthStateChanged, signInAnonymously } from "firebase/auth";
 
 export default {
-  middleware: "maintenance",
+  middleware: ["maintenance", "auth"],
   data() {
     return {
       data: [],
@@ -50,19 +50,6 @@ export default {
       });
     },
   },
-  mounted() {
-    const auth = getAuth();
-    onAuthStateChanged(auth, (user) => {
-      if (!user) {
-        signInAnonymously(auth)
-          .then(() => {
-            console.log("Login");
-          })
-          .catch((error) => {
-            this.$router.push("/error");
-          });
-      }
-    });
-  },
+  mounted() {},
 };
 </script>
