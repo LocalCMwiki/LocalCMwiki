@@ -34,7 +34,7 @@ export default {
       {
         hid: "og:description",
         property: "og:description",
-        content: "ローカルCMをまとめるwikiです。",
+        content: "このサイトはローカルCMをまとめるwikiです。",
       },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:creator", content: "@localcmwiki" },
