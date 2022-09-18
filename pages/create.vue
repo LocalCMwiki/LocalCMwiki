@@ -62,6 +62,7 @@ export default {
   head() {
     return {
       title: "新規ページ作成",
+      meta: [{ hid: "robots", name: "robots", content: "noindex" }],
     };
   },
   components: {

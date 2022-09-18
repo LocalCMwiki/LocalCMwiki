@@ -68,6 +68,7 @@ export default {
   head() {
     return {
       title: this.title + "の編集",
+      meta: [{ hid: "robots", name: "robots", content: "noindex" }],
     };
   },
   components: {
